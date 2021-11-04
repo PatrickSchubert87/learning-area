@@ -23,20 +23,20 @@
       <h2>Enter your support query</h2>
       <ul>
         <li>
-          <label for="uname">User name:</label>
-          <input type="text" name="uname" id="uname">
+          <label for="uname" >User name: <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+          <input type="text" name="uname" id="uname" required>
         </li>
         <li>
-          <label for="email">Email address:</label>
-          <input type="text" name="email" id="email">
+          <label for="email" >Email address: <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+          <input type="email" name="email" id="email" required minlength="5" maxlength="20">
         </li>
         <li>
-          <label for="phone">Phone number:</label>
-          <input type="text" name="phone" id="phone">
+          <label for="phone" >Phone number: <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+          <input type="tel" name="phone" id="phone" required maxlength="15">
         </li>
         <li>
-          <label for="comment">Comment:</label>
-          <textarea name="comment" id="comment">
+          <label for="comment" >Comment: <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+          <textarea name="comment" id="comment" required maxlength="200">
           </textarea>
         </li>
         <li>
