@@ -21,14 +21,22 @@
   <body>
     <form>
       <label for="mail">I would like you to provide me with an e-mail address:</label>
-      <input type="email" id="mail" name="mail">
+      <input type="email" id="mail" name="mail" required minlength="10">
       <button>Submit</button>
     </form>
   </body>
   <script>
     const email = document.getElementById("mail");
 
-
+    let RegEx = '/[a-zA-Z0-9\.\-\_]*[@]{1}[a-zA-Z0-9\.\-\_]*[\.]{1}[a-zA-Z0-9]{2,3}/g';
+    email.addEventListener('change', () => {
+      // e.preventDefault();
+      if(email === RegEx){
+        console.log('Everything works like epected');
+      } else {
+        console.log('something is not correct and needs to be set as email address');
+      }
+    })
   </script>
 
 </html>
